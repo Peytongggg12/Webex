@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Salt</title>
+</head>
+<body>
+  <p style="color:red;">
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const msg = params.get('msg');
+      if (msg) document.write(msg);
+    </script>
+  </p>
+
+  <form action="loginSalt.php" method="post">
+    <table>
+      <tr>
+        <td>User name:</td>
+        <td><input name="uName" type="text" required></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input name="pw" type="password" required></td>
+      </tr>
+      <tr>
+        <td><input type="submit" value="Login"></td>
+        <td><input type="reset" value="Reset"></td>
+      </tr>
+    </table>
+  </form>
+
+  <hr>
+  <p>If you are new, you have to <a href="registerSalt.html">register</a> here.</p>
+</body>
+</html>
